@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日替わり占いアプリ🌟</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>日替わり占い🌈</h1>
+
+<div id="menu">
+  <p>占いの種類を選んでね</p>
+  <button onclick="goToForm('blood')">血液型占い</button>
+  <button onclick="goToForm('birthday')">誕生日占い</button>
+  <button onclick="goToForm('personality')">性格診断占い</button>
+  <button onclick="goToForm('zodiac')">星座占い</button>
+</div>
+
+<div id="formArea" style="display:none;"></div>
+<button id="fortuneBtn" style="display:none;" onclick="showFortune()">占う！</button>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
 
