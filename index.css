@@ -1,65 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
-  text-align: center;
   margin: 0;
-  padding: 0 10px;
-  background: #fffaf0;
-  color: #333;
-  transition: background 1s ease;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #fff7cc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.phone {
+  width: 390px;
+  height: 780px;
+  background: #000;
+  border-radius: 40px;
+  padding: 14px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff, #fff8dc);
+  border-radius: 26px;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto;
+  transition: background 0.5s;
 }
 
 h1 {
-  margin: 20px 0;
-  color: #d2691e;
+  margin-top: 0;
 }
 
 button {
-  padding: 12px 24px;
-  margin: 5px;
+  width: 90%;
+  padding: 12px;
+  margin: 6px 0;
   font-size: 16px;
-  cursor: pointer;
-  background-color: #ffdead;
   border: none;
-  border-radius: 8px;
-  box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background: #ffb6c1;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #f4a460;
+  opacity: 0.9;
 }
 
 input, select {
-  padding: 12px;
-  font-size: 16px;
-  margin: 5px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
   width: 90%;
-  max-width: 300px;
+  padding: 10px;
+  margin: 6px 0;
+  font-size: 16px;
 }
 
-#formArea, #result {
-  margin-top: 20px;
-  font-size: 18px;
-  width: 100%;
+#runBtn {
+  display: none;
+  background: #ffa500;
+  color: #fff;
 }
 
 .result-box {
-  background-color: #fff8dc;
-  padding: 15px;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
-  margin-top: 10px;
-  max-width: 400px;
-  width: 90%;
-  animation: glow 2s infinite alternate;
+  margin-top: 15px;
+  padding: 18px;
+  border-radius: 14px;
+  font-size: 18px;
+  animation: pop 0.4s ease;
 }
 
-
-/* 背景光エフェクトアニメーション */
-@keyframes glow {
-  0% { box-shadow: 0 0 10px rgba(255,255,255,0.3); }
-  50% { box-shadow: 0 0 20px rgba(255,255,255,0.6); }
-  100% { box-shadow: 0 0 10px rgba(255,255,255,0.3); }
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
