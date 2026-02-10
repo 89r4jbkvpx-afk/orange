@@ -1,135 +1,77 @@
-/* ===== 全体 ===== */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-  background: linear-gradient(135deg, #ffe0ec, #fff6d5);
   min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #fff7cc);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* ===== メインカード ===== */
-.container {
-  background: #fff;
-  width: 90%;
-  max-width: 420px;
-  padding: 24px 20px 28px;
-  border-radius: 20px;          /* 丸四角 */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+.phone {
+  width: 390px;
+  height: 780px;
+  background: #000;
+  border-radius: 40px;
+  padding: 14px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff, #fff8dc);
+  border-radius: 26px;
+  padding: 20px;
   text-align: center;
-  animation: fadeIn 0.4s ease;
+  overflow-y: auto;
+  transition: background 0.5s;
 }
 
-/* ===== タイトル ===== */
 h1 {
   margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 24px;
 }
 
-p {
-  margin: 10px 0 18px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* ===== ボタン ===== */
 button {
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
+  width: 90%;
+  padding: 12px;
+  margin: 6px 0;
   font-size: 16px;
   border: none;
-  border-radius: 14px;
+  border-radius: 10px;
   background: #ffb6c1;
-  color: #333;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
 }
 
-button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin: 6px 0;
+  font-size: 16px;
 }
 
-/* ===== 入力欄 ===== */
-select,
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0 14px;
-  font-size: 15px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-/* ===== 結果画面 ===== */
-.result {
-  margin-top: 15px;
-  padding: 16px;
-  border-radius: 16px;
-  background: #fff6f9;
-  animation: popIn 0.4s ease;
-}
-
-.result h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.result p {
-  font-size: 15px;
-  margin: 8px 0;
-}
-
-/* ===== ラッキー系 ===== */
-.lucky {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* ===== 非表示切り替え ===== */
-.hidden {
+#runBtn {
   display: none;
+  background: #ffa500;
+  color: #fff;
 }
 
-/* ===== アニメーション ===== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.result-box {
+  margin-top: 15px;
+  padding: 18px;
+  border-radius: 14px;
+  font-size: 18px;
+  animation: pop 0.4s ease;
 }
 
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ===== PCでも崩れない調整 ===== */
-@media (min-width: 600px) {
-  .container {
-    padding: 28px 26px 32px;
-  }
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
